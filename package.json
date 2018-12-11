@@ -1,0 +1,46 @@
+{
+  "name": "@demimonde/electroscope.io",
+  "version": "0.0.0",
+  "description": "The Electroscope.Io Website For Accessing Metadata Service With API Key.",
+  "main": "build",
+  "scripts": {
+    "t": "zoroaster -a",
+    "test": "yarn t test/spec test/mask",
+    "spec": "yarn t test/spec",
+    "mask": "yarn t test/mask",
+    "test-build": "ALAMODE_ENV=test-build yarn test",
+    "start": "node build/bin/app",
+    "lint": "eslint .",
+    "doc": "NODE_DEBUG=doc doc documentary -o README.md",
+    "build": "alamode src -o build -s -i bin/index.js",
+    "dev": "node src/bin",
+    "dokku": "git push dokku"
+  },
+  "files": [
+    "build"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/demimonde/electroscope.io.git"
+  },
+  "keywords": [
+    "electroscope.io",
+    "demimonde"
+  ],
+  "author": "Anton <anton@adc.sh>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/demimonde/electroscope.io/issues"
+  },
+  "homepage": "https://github.com/demimonde/electroscope.io#readme",
+  "devDependencies": {
+    "@demimonde/dotenv": "1.0.0",
+    "alamode": "1.6.1",
+    "documentary": "1.20.1",
+    "eslint-config-artdeco": "1.0.1"
+  },
+  "dependencies": {
+    "@idio/core": "1.0.2",
+    "@idio/facebook": "1.0.0"
+  }
+}
